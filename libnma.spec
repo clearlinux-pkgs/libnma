@@ -4,7 +4,7 @@
 #
 Name     : libnma
 Version  : 1.8.30
-Release  : 3
+Release  : 4
 URL      : https://download.gnome.org/sources/libnma/1.8/libnma-1.8.30.tar.xz
 Source0  : https://download.gnome.org/sources/libnma/1.8/libnma-1.8.30.tar.xz
 Summary  : NetworkManager UI utilities (libnm version)
