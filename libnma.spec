@@ -4,7 +4,7 @@
 #
 Name     : libnma
 Version  : 1.8.34
-Release  : 6
+Release  : 7
 URL      : https://download.gnome.org/sources/libnma/1.8/libnma-1.8.34.tar.xz
 Source0  : https://download.gnome.org/sources/libnma/1.8/libnma-1.8.34.tar.xz
 Summary  : NetworkManager UI utilities (libnm version)
@@ -96,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1643040157
+export SOURCE_DATE_EPOCH=1647882650
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -105,7 +105,7 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
-%configure --disable-static
+%configure --disable-static --with-libnma-gtk4
 make  %{?_smp_mflags}
 
 %check
@@ -116,7 +116,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1643040157
+export SOURCE_DATE_EPOCH=1647882650
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libnma
 cp %{_builddir}/libnma-1.8.34/COPYING %{buildroot}/usr/share/package-licenses/libnma/4cc77b90af91e615a64ae04893fdffa7939db84c
@@ -130,8 +130,11 @@ cp %{_builddir}/libnma-1.8.34/COPYING.LGPL %{buildroot}/usr/share/package-licens
 %files data
 %defattr(-,root,root,-)
 /usr/lib64/girepository-1.0/NMA-1.0.typelib
+/usr/lib64/girepository-1.0/NMA4-1.0.typelib
 /usr/share/gir-1.0/*.gir
 /usr/share/glib-2.0/schemas/org.gnome.nm-applet.gschema.xml
+/usr/share/vala/vapi/libnma-gtk4.deps
+/usr/share/vala/vapi/libnma-gtk4.vapi
 /usr/share/vala/vapi/libnma.deps
 /usr/share/vala/vapi/libnma.vapi
 
@@ -154,7 +157,9 @@ cp %{_builddir}/libnma-1.8.34/COPYING.LGPL %{buildroot}/usr/share/package-licens
 /usr/include/libnma/nma-ws-wpa-eap.h
 /usr/include/libnma/nma-ws-wpa-psk.h
 /usr/include/libnma/nma-ws.h
+/usr/lib64/libnma-gtk4.so
 /usr/lib64/libnma.so
+/usr/lib64/pkgconfig/libnma-gtk4.pc
 /usr/lib64/pkgconfig/libnma.pc
 
 %files doc
@@ -184,6 +189,8 @@ cp %{_builddir}/libnma-1.8.34/COPYING.LGPL %{buildroot}/usr/share/package-licens
 
 %files lib
 %defattr(-,root,root,-)
+/usr/lib64/libnma-gtk4.so.0
+/usr/lib64/libnma-gtk4.so.0.0.0
 /usr/lib64/libnma.so.0
 /usr/lib64/libnma.so.0.0.0
 
