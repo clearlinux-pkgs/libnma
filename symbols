@@ -4,6 +4,7 @@ libnma-gtk4.so.0:libnma_1_8_12
 libnma-gtk4.so.0:libnma_1_8_20
 libnma-gtk4.so.0:libnma_1_8_22
 libnma-gtk4.so.0:libnma_1_8_28
+libnma-gtk4.so.0:libnma_1_8_36
 libnma-gtk4.so.0:nma_bar_code_draw
 libnma-gtk4.so.0:nma_bar_code_get_size
 libnma-gtk4.so.0:nma_bar_code_get_type
@@ -110,6 +111,8 @@ libnma-gtk4.so.0:nma_ws_fill_connection
 libnma-gtk4.so.0:nma_ws_get_type
 libnma-gtk4.so.0:nma_ws_leap_get_type
 libnma-gtk4.so.0:nma_ws_leap_new
+libnma-gtk4.so.0:nma_ws_owe_get_type
+libnma-gtk4.so.0:nma_ws_owe_new
 libnma-gtk4.so.0:nma_ws_sae_get_type
 libnma-gtk4.so.0:nma_ws_sae_new
 libnma-gtk4.so.0:nma_ws_validate
@@ -125,6 +128,7 @@ libnma.so.0:libnma_1_8_12
 libnma.so.0:libnma_1_8_20
 libnma.so.0:libnma_1_8_22
 libnma.so.0:libnma_1_8_28
+libnma.so.0:libnma_1_8_36
 libnma.so.0:nma_bar_code_draw
 libnma.so.0:nma_bar_code_get_size
 libnma.so.0:nma_bar_code_get_type
@@ -231,6 +235,8 @@ libnma.so.0:nma_ws_fill_connection
 libnma.so.0:nma_ws_get_type
 libnma.so.0:nma_ws_leap_get_type
 libnma.so.0:nma_ws_leap_new
+libnma.so.0:nma_ws_owe_get_type
+libnma.so.0:nma_ws_owe_new
 libnma.so.0:nma_ws_sae_get_type
 libnma.so.0:nma_ws_sae_new
 libnma.so.0:nma_ws_validate

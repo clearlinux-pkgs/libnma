@@ -1,3 +1,4 @@
+Configure miss: GCR_GTK4
 Configure miss: whether -Wcast-function-type works as expected
 Configure miss: whether -Wmissing-braces works as expected
 Configure miss: whether -Wparentheses-equality works as expected
