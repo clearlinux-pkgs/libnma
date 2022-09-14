@@ -1,3 +1,5 @@
+Configure miss: GCR_GTK3
+Configure miss: GCR_GTK3
 Configure miss: GCR_GTK4
 Configure miss: whether -Wcast-function-type works as expected
 Configure miss: whether -Wmissing-braces works as expected
@@ -7,3 +9,4 @@ Configure miss: whether -Wunknown-attributes works as expected
 Configure miss: whether -Wunknown-warning-option works as expected
 Configure miss: whether to disable iso-codes at build-time
 Configure miss: whether to disable mobile-broadband-provider-info at build-time
+Configure miss: x86_64-generic-linux-gnu-file

@@ -1,4 +1,20 @@
 =======================================
+libnma-1.10.2
+Overview of changes since libnma-1.10.0
+=======================================
+
+* Do not pop a certificate chooser if nobody clicked the button.
+* Added Georgian translation.
+
+=======================================
+libnma-1.10.0
+Overview of changes since libnma-1.8.40
+=======================================
+
+* Libnma-gtk4 now has Smart Card support viad Gtk4-enabled version of Gcr.
+* nma-cert-chooser.c is now included in the list of translated files.
+
+=======================================
 libnma-1.8.40
 Overview of changes since libnma-1.8.38
 =======================================
