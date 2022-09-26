@@ -4,7 +4,7 @@
 #
 Name     : libnma
 Version  : 1.10.2
-Release  : 13
+Release  : 14
 URL      : https://download.gnome.org/sources/libnma/1.10/libnma-1.10.2.tar.xz
 Source0  : https://download.gnome.org/sources/libnma/1.10/libnma-1.10.2.tar.xz
 Summary  : NetworkManager UI utilities (libnm version)
@@ -95,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663189564
+export SOURCE_DATE_EPOCH=1664158203
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -115,7 +115,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1663189564
+export SOURCE_DATE_EPOCH=1664158203
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libnma
 cp %{_builddir}/libnma-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libnma/4cc77b90af91e615a64ae04893fdffa7939db84c || :
