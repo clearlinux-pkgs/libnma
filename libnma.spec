@@ -4,7 +4,7 @@
 #
 Name     : libnma
 Version  : 1.10.4
-Release  : 15
+Release  : 16
 URL      : https://download.gnome.org/sources/libnma/1.10/libnma-1.10.4.tar.xz
 Source0  : https://download.gnome.org/sources/libnma/1.10/libnma-1.10.4.tar.xz
 Summary  : NetworkManager UI utilities (libnm version)
@@ -95,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667863135
+export SOURCE_DATE_EPOCH=1667867062
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -115,13 +115,15 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1667863135
+export SOURCE_DATE_EPOCH=1667867062
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libnma
 cp %{_builddir}/libnma-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libnma/4cc77b90af91e615a64ae04893fdffa7939db84c || :
 cp %{_builddir}/libnma-%{version}/COPYING.LGPL %{buildroot}/usr/share/package-licenses/libnma/01a6b4bf79aca9b556822601186afab86e8c4fbf || :
 %make_install
 %find_lang libnma
+## Remove excluded files
+rm -f %{buildroot}*/usr/share/glib-2.0/schemas/org.gnome.nm-applet.gschema.xml
 
 %files
 %defattr(-,root,root,-)
@@ -132,7 +134,6 @@ cp %{_builddir}/libnma-%{version}/COPYING.LGPL %{buildroot}/usr/share/package-li
 /usr/lib64/girepository-1.0/NMA4-1.0.typelib
 /usr/share/gir-1.0/*.gir
 /usr/share/glib-2.0/schemas/org.gnome.nm-applet.eap.gschema.xml
-/usr/share/glib-2.0/schemas/org.gnome.nm-applet.gschema.xml
 /usr/share/vala/vapi/libnma-gtk4.deps
 /usr/share/vala/vapi/libnma-gtk4.vapi
 /usr/share/vala/vapi/libnma.deps
