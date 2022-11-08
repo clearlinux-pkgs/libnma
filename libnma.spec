@@ -4,7 +4,7 @@
 #
 Name     : libnma
 Version  : 1.10.4
-Release  : 16
+Release  : 17
 URL      : https://download.gnome.org/sources/libnma/1.10/libnma-1.10.4.tar.xz
 Source0  : https://download.gnome.org/sources/libnma/1.10/libnma-1.10.4.tar.xz
 Summary  : NetworkManager UI utilities (libnm version)
